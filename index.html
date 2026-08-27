@@ -271,8 +271,11 @@
         overflow: hidden;
         border-radius: 0.875rem;
         box-shadow: 0 16px 34px rgba(51, 23, 40, 0.16);
+        position: relative;
+        aspect-ratio: 4 / 3;
+        align-self: start;
       }
-      .map iframe { display: block; width: 100%; height: 256px; border: 0; }
+      .map iframe { display: block; position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
       .quote-wrap { background: var(--linen-dim); border-top: 1px solid var(--linen-dim); padding: 4rem 0; }
       blockquote {
         width: min(40rem, calc(100% - 40px));
@@ -326,7 +329,6 @@
         .hero { min-height: 84vh; }
         .film { grid-template-columns: repeat(4, 1fr); }
         .events-grid, .visit-grid { grid-template-columns: 1fr 1fr; gap: 3.5rem; }
-        .map iframe { height: 288px; }
         blockquote { padding: 2.75rem 2.9rem; }
       }
       @media (max-width: 767px) {
